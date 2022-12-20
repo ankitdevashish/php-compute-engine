@@ -3,9 +3,7 @@ steps:
   id: Update staging server
   entrypoint: /bin/sh
   args:
-  - '-c'
-  - |
-    gcloud config set project avian-slice-371209 && \
+  - gcloud config set project avian-slice-371209 && \
     gcloud compute ssh php-instance-2 --zone=us-central1-c --command='sudo /bin/sh /home/alt/pull.sh'
 #        gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209  --command='/bin/sh /home/alt/pull.sh'
 #options:
