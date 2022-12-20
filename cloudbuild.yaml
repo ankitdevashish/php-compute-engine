@@ -1,0 +1,10 @@
+steps:
+  #First Clone from Google Cloud Source Repository
+  - name: "gcr.io/cloud-builders/gcloud"
+    id: update php compute engine
+    entrypoint: /bin/sh
+    args: 
+    - '-c'
+    - |
+      set -x && \
+      gcloud compute ssh php-instance-1 --zone=us-west4-b  --command='/bin/sh /home/alt/pull.sh'
