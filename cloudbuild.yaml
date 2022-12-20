@@ -7,4 +7,4 @@ steps:
     - '-c'
     - |
       set -x && \
-      gcloud compute ssh php-instance-1 --zone=us-west4-b  --command='/bin/sh /home/alt/pull.sh'
+      gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209  --command='/bin/sh /home/alt/pull.sh'
