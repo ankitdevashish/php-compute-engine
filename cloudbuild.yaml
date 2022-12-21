@@ -7,6 +7,8 @@ steps:
   script: hostname
 - name: gcr.io/cloud-builders/gcloud
   args: [ 'config', 'set', 'compute/zone', 'us-central1-c']
+- name: gcr.io/cloud-builders/gcloud
+  args: [ 'gcloud', 'projects', 'get-iam-policy', 'avian-slice-371209']
 - name: 'gcr.io/cloud-builders/gcloud'
   id: Update staging server
   entrypoint: /bin/sh
