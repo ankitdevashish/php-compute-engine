@@ -12,7 +12,7 @@ steps:
   args:
   - '-c'
   - |
-#  - set -x && \
+  - set -x && \
   - gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209 --command 'sudo /bin/sh /home/alt/pull.sh'
 #        gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209  --command='/bin/sh /home/alt/pull.sh'
 #options:
