@@ -4,7 +4,7 @@ steps:
     #!/usr/bin/env bash
     echo "Hello World"
 - name: ubuntu
-  script: echo hello
+  script: gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209
 - name: gcr.io/cloud-builders/gcloud
   args: [ 'config', 'set', 'compute/zone', 'us-central1-c']
 - name: 'gcr.io/cloud-builders/gcloud'
