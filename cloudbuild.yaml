@@ -5,6 +5,8 @@ steps:
     echo "Hello World"
 - name: ubuntu
   script: echo hello
+- name: gcr.io/cloud-builders/gcloud
+  args: [ 'config', 'set', 'compute/zone', 'us-central1-c']
 - name: 'gcr.io/cloud-builders/gcloud'
   id: Update staging server
   entrypoint: /bin/sh
@@ -12,7 +14,7 @@ steps:
   - '-c'
   - |
   - set -x && \
-    gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209 --command='/bin/sh /home/alt/pull.sh'
+    gcloud compute ssh php-instance-2 --zone=us-central1-c --command='/bin/sh /home/alt/pull.sh'
 #        gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209  --command='/bin/sh /home/alt/pull.sh'
 #options:
 #  logging: CLOUD_LOGGING_ONLY
