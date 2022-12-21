@@ -6,7 +6,6 @@ steps:
   - name: ubuntu
     script: echo hello
   - name: "gcr.io/cloud-builders/gcloud"
-    #  args: ['gcloud compute ssh', 'php-instance-2', 'zone', 'us-central1-c']
     args:
       - '-c'
       - |
