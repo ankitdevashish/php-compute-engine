@@ -7,8 +7,8 @@ steps:
   script: echo hello
 #- name: gcr.io/cloud-builders/gcloud
 #  args: [ 'config', 'set', 'compute/zone', 'us-central1-c']
-- name: 'gcr.io/$PROJECT_ID/gcloud'
-  args: ['gcloud compute ssh php-instance-2 --zone us-central1-c ']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['gcloud', 'compute', 'ssh', 'php-instance-2', '--zone', 'us-central1-c']
 #  - '-c'
 #  - |
 #  - set -x && \
