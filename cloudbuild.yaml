@@ -4,9 +4,9 @@ steps:
   entrypoint: /bin/sh
   args:
   - '-c'
-#  - |
-#  - set -x && \
-#    gcloud compute ssh php-instance-2 --zone=us-central1-c --command='/bin/sh /home/alt/pull.sh'
+  - |
+  - set -x && \
+    gcloud compute ssh php-instance-2 --zone=us-central1-c --command='/bin/sh /home/alt/pull.sh'
 #        gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209  --command='/bin/sh /home/alt/pull.sh'
 #options:
 #  logging: CLOUD_LOGGING_ONLY
