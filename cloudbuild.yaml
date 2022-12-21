@@ -8,8 +8,6 @@ steps:
 #- name: gcr.io/cloud-builders/gcloud
 #  args: [ 'config', 'set', 'compute/zone', 'us-central1-c']
 - name: 'gcr.io/cloud-builders/gcloud'
-  id: Update staging server
-  entrypoint: /bin/sh
   args: ['gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209 --command "sudo /bin/sh /home/alt/pull.sh"']
 #  - '-c'
 #  - |
