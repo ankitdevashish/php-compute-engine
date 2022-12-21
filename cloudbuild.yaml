@@ -8,11 +8,12 @@ steps:
 - name: gcr.io/cloud-builders/gcloud
   args: [ 'config', 'set', 'compute/zone', 'us-central1-c']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['gcloud compute ssh', 'php-instance-2', 'zone', 'us-central1-c']
-#  - '-c'
-#  - |
+#  args: ['gcloud compute ssh', 'php-instance-2', 'zone', 'us-central1-c']
+  args:
+  - '-c'
+  - |
 #  - set -x && \
-#    gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209 --command 'sudo /bin/sh /home/alt/pull.sh'
+  - gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209 --command 'sudo /bin/sh /home/alt/pull.sh'
 #        gcloud compute ssh php-instance-2 --zone=us-central1-c --project=avian-slice-371209  --command='/bin/sh /home/alt/pull.sh'
 #options:
 #  logging: CLOUD_LOGGING_ONLY
