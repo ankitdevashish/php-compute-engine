@@ -1,4 +1,10 @@
 steps:
+- name: bash
+  script: |
+    #!/usr/bin/env bash
+    echo "Hello World"
+- name: ubuntu
+  script: echo hello
 - name: 'gcr.io/cloud-builders/gcloud'
   id: Update staging server
   entrypoint: /bin/sh
