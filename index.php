@@ -9,7 +9,7 @@ use Google\Cloud\SecretManager\V1\Replication;
 use Google\Cloud\SecretManager\V1\Replication\Automatic;
 use Google\Cloud\SecretManager\V1\Secret;
 use Google\Cloud\SecretManager\V1\SecretManagerServiceClient;
-/*
+
 // Authenticating with keyfile data.
 $storage = new StorageClient([
     'keyFile' => json_decode(file_get_contents('./avian-slice-371209-1c0ccfc1471c.json'), true)
@@ -24,9 +24,9 @@ $storage = new StorageClient([
 $storage = new StorageClient([
     'projectId' => 'avian-slice-371209'
 ]);
-*/
-$client = new SecretManagerServiceClient();
 
+$client = new SecretManagerServiceClient();
+/*
 $secret = $client->createSecret(
     SecretManagerServiceClient::projectName('avian-slice-371209'), '1c0ccfc1471c8127f5cc4b7404cdc843d463ad7c',
     new Secret([
@@ -43,5 +43,6 @@ printf(
     'Created secret: %s' . PHP_EOL,
     $secret->getName()
 );
-
+*/
+echo "testint compute engine, from cloud build, iu"
 ?>
