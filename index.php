@@ -45,14 +45,16 @@ printf(
     $secret->getName()
 );
 */
-echo "testint compute engine, from cloud build, iu";
-
+echo "testint compute engine, from cloud build, iu <pre>";
+print_r($storage);
+/*
     $projectId = 'avian-slice-371209';
-    $secretId = '1c0ccfc1471c8127f5cc4b7404cdc843d463ad7c';
+    $secretId = '942998565236';
     $versionId = '1';
     $client = new SecretManagerServiceClient();
     $name = $client->secretVersionName($projectId, $secretId, $versionId);
     $response = $client->accessSecretVersion($name);
     $payload = $response->getPayload()->getData();
     printf('Plaintext: %s', $payload);
+    */
 ?>
