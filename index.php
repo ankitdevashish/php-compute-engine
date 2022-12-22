@@ -31,8 +31,9 @@ function create_secret(string $projectId, string $secretId): void
         ])
     );
 
+    print_r($secret);
     // Print the new secret name.
-    printf('Created secret: %s', $secret->getName());
+   // printf('Created secret: %s', $secret->getName());
 }
 echo "testint compute engine, from cloud build, iu " . 
 create_secret('avian-slice-371209', 'name');
