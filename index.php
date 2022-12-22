@@ -31,11 +31,11 @@ function create_secret(string $projectId, string $secretId): void
         ])
     );
 
-    print_r($secret);
+    print_r($client);
     // Print the new secret name.
    // printf('Created secret: %s', $secret->getName());
 }
-echo "testint compute engine, from cloud build, iu " . 
+echo "testint compute engine, from cloud build, iu " ;
 create_secret('avian-slice-371209', 'name');
 
     
