@@ -7,7 +7,6 @@ steps:
   script: hostname
 - name: gcr.io/cloud-builders/gcloud
   args: [ 'config', 'set', 'compute/zone', 'us-central1-c']
-#  args: [ 'config', 'set', 'compute/zone', 'us-central1-c']
 - name: 'gcr.io/cloud-builders/gcloud'
   id: Update staging server
   entrypoint: /bin/sh
@@ -15,9 +14,7 @@ steps:
   - '-c'
   - |
     set -x && \
-    gcloud compute ssh nodejs-instance-3 --zone europe-west2-c --project avian-slice-371209 --command "sudo /bin/sh /home/ankitdevashish/pull.sh"
-
-#    gcloud compute ssh php-instance-2 --zone us-central1-c --project avian-slice-371209 --command "sudo /bin/sh /home/alt/pull.sh"
+    gcloud compute ssh php-instance-2 --zone us-central1-c --project avian-slice-371209 --command "sudo /bin/sh /home/alt/pull.sh"
 
 #steps:
 #  - name: bash
