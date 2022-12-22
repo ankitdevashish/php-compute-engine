@@ -20,8 +20,8 @@ function create_secret(string $projectId, string $secretId): void
     $client = new SecretManagerServiceClient();
 
     // Build the resource name of the parent project.
-    echo $parent = $client->projectName($projectId);
-
+     $parent = $client->projectName($projectId);
+/*
     // Create the secret.
     $secret = $client->createSecret($parent, $secretId,
         new Secret([
@@ -30,7 +30,7 @@ function create_secret(string $projectId, string $secretId): void
             ]),
         ])
     );
-
+*/
     print_r($client);
     // Print the new secret name.
    // printf('Created secret: %s', $secret->getName());
