@@ -4,57 +4,38 @@ ini_set("display_errors", 1);
 
 require 'vendor/autoload.php';
 
-use Google\Cloud\Storage\StorageClient;
+// Import the Secret Manager client library.
 use Google\Cloud\SecretManager\V1\Replication;
 use Google\Cloud\SecretManager\V1\Replication\Automatic;
 use Google\Cloud\SecretManager\V1\Secret;
 use Google\Cloud\SecretManager\V1\SecretManagerServiceClient;
 
-// Authenticating with keyfile data.
-$storage = new StorageClient([
-    'keyFile' => json_decode(file_get_contents('./avian-slice-371209-1c0ccfc1471c.json'), true)
-]);
+/**
+ * @param string $projectId Your Google Cloud Project ID (e.g. 'my-project')
+ * @param string $secretId  Your secret ID (e.g. 'my-secret')
+ */
+function create_secret(string $projectId, string $secretId): void
+{
+    // Create the Secret Manager client.
+    $client = new SecretManagerServiceClient();
 
-// Authenticating with a keyfile path.
-$storage = new StorageClient([
-    'keyFilePath' => './avian-slice-371209-1c0ccfc1471c.json'
-]);
+    // Build the resource name of the parent project.
+    $parent = $client->projectName($projectId);
 
-// Providing the Google Cloud project ID.
-$storage = new StorageClient([
-    'projectId' => 'avian-slice-371209'
-]);
-
-/*
-$client = new SecretManagerServiceClient();
-
-$secret = $client->createSecret(
-    SecretManagerServiceClient::projectName('avian-slice-371209'), '1c0ccfc1471c8127f5cc4b7404cdc843d463ad7c',
-    new Secret([
-        'replication' => new Replication([
-            'automatic' => new Automatic()
+    // Create the secret.
+    $secret = $client->createSecret($parent, $secretId,
+        new Secret([
+            'replication' => new Replication([
+                'automatic' => new Automatic(),
+            ]),
         ])
-    ])
-);
+    );
 
-    echo "testint compute engine, from cloud build, iu". $secret->getName();  
+    // Print the new secret name.
+    printf('Created secret: %s', $secret->getName());
+}
+echo "testint compute engine, from cloud build, iu " . 
+create_secret('avian-slice-371209', 'name');
 
     
-printf(
-    'Created secret: %s' . PHP_EOL,
-    $secret->getName()
-);
-*/
-echo "testint compute engine, from cloud build, iu <pre>";
-print_r($storage);
-/*
-    $projectId = 'avian-slice-371209';
-    $secretId = '942998565236';
-    $versionId = '1';
-    $client = new SecretManagerServiceClient();
-    $name = $client->secretVersionName($projectId, $secretId, $versionId);
-    $response = $client->accessSecretVersion($name);
-    $payload = $response->getPayload()->getData();
-    printf('Plaintext: %s', $payload);
-    */
 ?>
