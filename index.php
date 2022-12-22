@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 require 'vendor/autoload.php';
 
 use Google\Cloud\Storage\StorageClient;
@@ -19,14 +22,13 @@ $storage = new StorageClient([
 
 // Providing the Google Cloud project ID.
 $storage = new StorageClient([
-    'projectId' => 'myProject'
+    'projectId' => 'avian-slice-371209'
 ]);
 
 $client = new SecretManagerServiceClient();
 
 $secret = $client->createSecret(
-    SecretManagerServiceClient::projectName('avian-slice-371209'),
-    'name2',
+    SecretManagerServiceClient::projectName('avian-slice-371209'), 'name2',
     new Secret([
         'replication' => new Replication([
             'automatic' => new Automatic()
