@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "avian-slice-371209",
+  "private_key_id": "1c0ccfc1471c8127f5cc4b7404cdc843d463ad7c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCKK2PEMQ1YMngf\ncMxIbisj9XA2p9mi23h+Jz7WGNiFaD5O+/A/MjByfQeIt+3MqJ8LSFrPWeYs/8rE\ngDXP6Z+pmzv3jCY5+RcJrm74XpktkxTn3xh56NY8Rxx7j2nWcy2dNqI1uWJoWsCl\ne5od57XRxdgFibCjATiR0koIJ02bXM96sbOwCiYGUydalYyv8teOiJJf5lXU/64z\n+Kp5AN/8cheZXVTVLrAk4U19G7UIZJEcNVuVdzoZg199M3PTVdrbse5+6aZMte3E\n/TQCmQq1hBtK2you8dHQU+3AcYrxgYF4UM1yWqkYUzajj69uUSMmAT8+8w78hJcc\nL6fzH5yzAgMBAAECggEAHHkjlp8rKlVANu52UqjNYBwos0K00WBb/NdWliVJnXhl\ner5lfIh5vmYwosaQjT/kgp03BYr3qadO4F6xeDajTf7tBS8PA5xm2HpnaOyJsYAh\na0Uo1JqcZ5CZ+IaN34Ed0cub8ulQs8Ob9p45nNcOu3uDcGS3D2hlgXtuAS8kSZMx\nsnDIut9EwWawswiieN+n1FAJp2M3hwHEcXJBTgXr85kBdQ1eoxcQFIwYlNseCEv1\nVFLIX3UeetJHlRHFSFtOy5e+EKFB23v95SgIdmXY4qj3JJEEJfyq28iOtC/JiplY\nNZ6YZS8aN1btLFMUAGyjfVP2EYhSYeDo9oPxVakURQKBgQC+6RJM6NZ54ZC+6O0V\nFFcovCGDXEusPHoF/R0FtNJTWs6yHBEXlaX93A3CcMu1lHbrfcTH7DGcZH/irQeT\nVmOjRWCkMQrPe5UeCQf8p4msGJ0CY4ZTgQO0JBjWlx/SUjo9UJMi2v0XCg9FRjRb\nwRi7uKaGacL3YcmykpFiJQMBxQKBgQC5RwPjsx5pZiMWWDa8VHUMW2xM54PSsiwk\nVENmXEPRTk1nqw8dTzJaIYw4vGJKsoJbny1IL7ZOXv1lMDX+CXDQ+ZEDyJvoje9I\noL+9wlddnhv1LCLK7VbC4MuYkty3M+O+0LYrVuYWi2Lgpp+bX/JWbMlieQn+aLrl\nToIUYJvkFwKBgBIdteHcenXIZN7o5Y6JhpfT+m4ntPqcJowo77cZ6JeGV3TpWund\nBopndlrML1iExSAlqCW8kRyhIM2W09A0c3IL5FbQXJFBze2yt7JPB65wC34tiZKk\n/H/8qOq8HoXrzaEB42R8WWX1S2usdM18Lmep5wt8P8cP3X73j5o7nuRtAoGBAJFs\nnDDtNsGj2YaAVvYblIPOfoMedOm7z8n0GbMOWGzA+SCVs5ddwjfcfSNLOhtHYepo\nVjKCwKVjCaGS5c4vus1MFfbSTw2J2nc3NUjMcaaZo3gc3HJLN/5eU2++Vl+16tyr\nFVGPM6oeXc3W+xAJjz0mxir0tlNqAMhbht5XtgShAoGAY8B+f40aoWJWBiOZGrxG\nltVe2sS/M2emisjZZc0iHz2GHll6SD2KAMM12gVswoOxte+67JddPnfkmbwkW7Go\n5ZyRqyZWyPc7TM28Bi49Pj/xRzJxMhZbrF1MpBUMvRt9ePoXcPQuSlsQA/ZtrkVW\nSqztok1ghK/9NHSRgLLbtrQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "avian-slice-371209@appspot.gserviceaccount.com",
+  "client_id": "118091035431408162440",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/avian-slice-371209%40appspot.gserviceaccount.com"
+}

@@ -12,12 +12,12 @@ use Google\Cloud\SecretManager\V1\SecretManagerServiceClient;
 
 // Authenticating with keyfile data.
 $storage = new StorageClient([
-    'keyFile' => json_decode(file_get_contents('./avian-slice-371209-3dd89dbc794b.json'), true)
+    'keyFile' => json_decode(file_get_contents('./avian-slice-371209-1c0ccfc1471c.json'), true)
 ]);
 
 // Authenticating with a keyfile path.
 $storage = new StorageClient([
-    'keyFilePath' => './avian-slice-371209-3dd89dbc794b.json'
+    'keyFilePath' => './avian-slice-371209-1c0ccfc1471c.json'
 ]);
 
 // Providing the Google Cloud project ID.
@@ -28,7 +28,7 @@ $storage = new StorageClient([
 $client = new SecretManagerServiceClient();
 
 $secret = $client->createSecret(
-    SecretManagerServiceClient::projectName('avian-slice-371209'), 'name2',
+    SecretManagerServiceClient::projectName('avian-slice-371209'), '1c0ccfc1471c8127f5cc4b7404cdc843d463ad7c',
     new Secret([
         'replication' => new Replication([
             'automatic' => new Automatic()
