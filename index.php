@@ -45,7 +45,7 @@ printf(
     $secret->getName()
 );
 */
-echo "testint compute engine, from cloud build, iu"
+echo "testint compute engine, from cloud build, iu";
 
     $projectId = 'avian-slice-371209';
     $secretId = '1c0ccfc1471c8127f5cc4b7404cdc843d463ad7c';
