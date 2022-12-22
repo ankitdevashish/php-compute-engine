@@ -25,8 +25,9 @@ $storage = new StorageClient([
     'projectId' => 'avian-slice-371209'
 ]);
 
-$client = new SecretManagerServiceClient();
 /*
+$client = new SecretManagerServiceClient();
+
 $secret = $client->createSecret(
     SecretManagerServiceClient::projectName('avian-slice-371209'), '1c0ccfc1471c8127f5cc4b7404cdc843d463ad7c',
     new Secret([
@@ -45,4 +46,13 @@ printf(
 );
 */
 echo "testint compute engine, from cloud build, iu"
+
+    $projectId = 'avian-slice-371209';
+    $secretId = '1c0ccfc1471c8127f5cc4b7404cdc843d463ad7c';
+    $versionId = '1';
+    $client = new SecretManagerServiceClient();
+    $name = $client->secretVersionName($projectId, $secretId, $versionId);
+    $response = $client->accessSecretVersion($name);
+    $payload = $response->getPayload()->getData();
+    printf('Plaintext: %s', $payload);
 ?>
